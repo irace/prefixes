@@ -9,70 +9,330 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <style>
+    tr.apple td {
+      background-color: #F0F8FF;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
 
     <h1>Objective-C class prefixes</h1>
-    <p>“In order to keep class names unique, the convention is to use prefixes on all classes. You’ll have noticed that Cocoa and Cocoa Touch class names typically start either with <code>NS</code> or <code>UI</code>. Two-letter prefixes like these are reserved by Apple for use in framework classes. Your own classes should use three letter prefixes. These might relate to a combination of your company name and your app name, or even a specific component within your app.” -<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Conventions/Conventions.html">Programming with Objective-C: Conventions</a></p>
 
-    <!-- https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/iPhoneOSFrameworks/iPhoneOSFrameworks.html -->
+    <p>“In order to keep class names unique, the convention is to use prefixes on all classes. You’ll have noticed that Cocoa and Cocoa Touch class names typically start either with <code>NS</code> or <code>UI</code>. Two-letter prefixes like these are reserved by Apple for use in framework classes. Your own classes should use three letter prefixes.” -<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Conventions/Conventions.html">Programming with Objective-C: Conventions</a></p>
+
+    <!-- Apple frameworks taken from: https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/iPhoneOSFrameworks/iPhoneOSFrameworks.html -->
 
     <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Prefix</th>
-          <th>Developer</th>
-        </tr>
-      </thead>
-      <tr>
-        <td>AF</td>
-        <td><a href="https://github.com/AFNetworking">AFNetworking</a></td>
+
+
+
+      <tr class="apple">
+        <td class="prefix">AB</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/CoreServicesLayer/CoreServicesLayer.html#//apple_ref/doc/uid/TP40007898-CH10-SW13">AddressBook.framework</a>, <a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/iPhoneOSTechnologies/iPhoneOSTechnologies.html#//apple_ref/doc/uid/TP40007898-CH3-SW21">AddressBookUI.framework</a></td>
       </tr>
-      <tr>
-        <td>BRY</td>
-        <td><a href="http://github.com/irace">Bryan Irace</a></td>
+
+
+      <tr class="apple">
+        <td class="prefix">AC</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/CoreServicesLayer/CoreServicesLayer.html#//apple_ref/doc/uid/TP40007898-CH10-SW24">Accounts.framework</a></td>
       </tr>
-      <tr>
-        <td>FB</td>
-        <td><a href="http://github.com/facebook">Facebook</a></td>
+
+      <tr class="apple">
+        <td class="prefix">AD</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/iPhoneOSTechnologies/iPhoneOSTechnologies.html#//apple_ref/doc/uid/TP40007898-CH3-SW13">iAd.framework</a></td>
       </tr>
+
       <tr>
-        <td>FX</td>
-        <td><a href="http://github.com/nicklockwood">Nick Lockwood</a></td>
+        <td class="prefix">AF</td>
+        <td class="codebase"><a href="https://github.com/AFNetworking">AFNetworking</a></td>
       </tr>
-      <tr>
-        <td>JTS</td>
-        <td><a href="https://github.com/jaredsinclair">Jared Sinclair</a></td>
-      <tr>
-        <td>LCK</td>
-        <td><a href="https://github.com/lickability">Lickability</a></td>
+
+      <tr class="apple">
+        <td class="prefix">AL</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/MediaLayer/MediaLayer.html#//apple_ref/doc/uid/TP40007898-CH9-SW14">AssetsLibrary.framework</a>, <a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/MediaLayer/MediaLayer.html#//apple_ref/doc/uid/TP40007898-CH9-SW13">OpenAL.framework</a></td>
       </tr>
-      <tr>
-        <td>MTL</td>
-        <td><a href="https://github.com/MantleFramework">Mantle</a></td>
+
+      <tr class="apple">
+        <td class="prefix">AS</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/CoreServicesLayer/CoreServicesLayer.html#//apple_ref/doc/uid/TP40007898-CH10-SW31">AdSupport.framework</a></td>
       </tr>
-      <tr>
-        <td>RX</td>
-        <td><a href="https://github.com/robrix">Rob Rix</a></td>
+
+      <tr class="apple">
+        <td class="prefix">AU</td>
+        <td class="codebase">AudioToolbox.framework, AudioUnit.framework</td>
       </tr>
-      <tr>
-        <td>SAM</td>
-        <td><a href="http://github.com/soffes">Sam Soffes</a></td>
+
+      <tr class="apple">
+        <td class="prefix">Audio</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/MediaLayer/MediaLayer.html#//apple_ref/doc/uid/TP40007898-CH9-SW8">AudioToolbox.framework, AudioUnit.framework, CoreAudio.framework</a></td>
       </tr>
-      <tr>
-        <td>RAC</td>
-        <td><a href="https://github.com/ReactiveCocoa">ReactiveCocoa</a></td>
+
+      <tr class="apple">
+        <td class="prefix">AV</td>
+        <td class="codebase">AVFoundation.framework</td>
       </tr>
+
       <tr>
-        <td>TM</td>
-        <td><a href="http://github.com/tumblr">Tumblr</a></td>
+        <td class="prefix">BRY</td>
+        <td class="codebase"><a href="http://github.com/irace">Bryan Irace</a></td>
       </tr>
+
+      <tr class="apple">
+        <td class="prefix">CA</td>
+        <td class="codebase">QuartzCore.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CB</td>
+        <td class="codebase">CoreBluetooth.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">cblas</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/
+        iphoneostechoverview/CoreOSLayer/CoreOSLayer.html#//apple_ref/doc/uid/TP40007898-CH11-SW23">Accelerate.framework</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CF</td>
+        <td class="codebase">CFNetwork.framework, CoreFoundation.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CG</td>
+        <td class="codebase">CoreGraphics.framework, ImageIO.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CI</td>
+        <td class="codebase">CoreImage.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CL</td>
+        <td class="codebase">CoreLocation.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CM</td>
+        <td class="codebase">CoreMedia.framework, CoreMotion.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CSSM</td>
+        <td class="codebase">Security.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CT</td>
+        <td class="codebase">CoreTelephony.framework, CoreText.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">CV</td>
+        <td class="codebase">CoreVideo.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">EAGL</td>
+        <td class="codebase">OpenGLES.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">EA</td>
+        <td class="codebase">ExternalAccessory.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">EK</td>
+        <td class="codebase">EventKit.framework, EventKitUI.framework</td>
+      </tr>
+
       <tr>
-        <td>TTT</td>
-        <td><a href="https://github.com/mattt">Mattt Thompson</a></td>
+        <td class="prefix">FB</td>
+        <td class="codebase"><a href="http://github.com/facebook">Facebook</a></td>
       </tr>
+
+      <tr>
+        <td class="prefix">FX</td>
+        <td class="codebase"><a href="http://github.com/nicklockwood">Nick Lockwood</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">GC</td>
+        <td class="codebase">GameController.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">GK</td>
+        <td class="codebase">GameKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">GL</td>
+        <td class="codebase">OpenGLES.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">GLK</td>
+        <td class="codebase">GLKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">gss</td>
+        <td class="codebase">GSS.framework</td>
+      </tr>
+
+      <tr>
+        <td class="prefix">JTS</td>
+        <td class="codebase"><a href="https://github.com/jaredsinclair">Jared Sinclair</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">JS</td>
+        <td class="codebase">JavaScriptCore</td>
+      </tr>
+
+      <tr>
+        <td class="prefix">LCK</td>
+        <td class="codebase"><a href="https://github.com/lickability">Lickability</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MA</td>
+        <td class="codebase">MediaAccessibility.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MC</td>
+        <td class="codebase">MultipeerConnectivity.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MF</td>
+        <td class="codebase">MessageUI.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MIDI</td>
+        <td class="codebase">CoreMIDI.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MK</td>
+        <td class="codebase">MapKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MP</td>
+        <td class="codebase">MediaPlayer.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">MT</td>
+        <td class="codebase">MediaToolbox.framework</td>
+      </tr>
+
+      <tr>
+        <td class="prefix">MTL</td>
+        <td class="codebase"><a href="https://github.com/MantleFramework">Mantle</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">NK</td>
+        <td class="codebase">NewsstandKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">NS</td>
+        <td class="codebase">Foundation.framework, CoreData.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">PK</td>
+        <td class="codebase">PassKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">QL</td>
+        <td class="codebase">QuickLook.framework</td>
+      </tr>
+
+      <tr>
+        <td class="prefix">RAC</td>
+        <td class="codebase"><a href="https://github.com/ReactiveCocoa">ReactiveCocoa</a></td>
+      </tr>
+
+      <tr>
+        <td class="prefix">RX</td>
+        <td class="codebase"><a href="https://github.com/robrix">Rob Rix</a></td>
+      </tr>
+
+      <tr>
+        <td class="prefix">SAM</td>
+        <td class="codebase"><a href="http://github.com/soffes">Sam Soffes</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">SC</td>
+        <td class="codebase">SystemConfiguration.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">Sec</td>
+        <td class="codebase">Security.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">SK</td>
+        <td class="codebase">SpriteKit.framework, StoreKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">SL</td>
+        <td class="codebase">Social.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">SS</td>
+        <td class="codebase">SafariServices.framework</td>
+      </tr>
+
+      <tr>
+        <td class="prefix">TM</td>
+        <td class="codebase"><a href="http://github.com/tumblr">Tumblr</a></td>
+      </tr>
+
+      <tr>
+        <td class="prefix">TTT</td>
+        <td class="codebase"><a href="https://github.com/mattt">Mattt Thompson</a></td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">TW</td>
+        <td class="codebase">Twitter.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">UI</td>
+        <td class="codebase">UIKit.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">UT</td>
+        <td class="codebase">MobileCoreServices.framework</td>
+      </tr>
+
+      <tr class="apple">
+        <td class="prefix">vDSP</td>
+        <td class="codebase"><a href="https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/
+        iphoneostechoverview/CoreOSLayer/CoreOSLayer.html#//apple_ref/doc/uid/TP40007898-CH11-SW23">Accelerate.framework</a></td>
+      </tr>
+
     </table>
   </div>
 </body>
